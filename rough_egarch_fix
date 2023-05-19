@@ -1,0 +1,5 @@
+pgmm1 <- pgmm(fdi_2_gdp~lag(fdi_2_gdp, 1:2)+log(EGG_ts)+log(capital)+
+                lag(log(output), 0:1) | lag(fdi_2_gdp, 2:99),
+                data = EmplUK, effect = "twoways", model = "twosteps")
+
+summary(pgmm1)
